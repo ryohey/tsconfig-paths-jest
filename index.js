@@ -7,7 +7,7 @@ const fromPairs = pairs => pairs.reduce((res, [key, value]) => ({ ...res, [key]:
 module.exports = function moduleNameMapperFromTSPaths(tsconfig) {
   return fromPairs(
     Object.entries(tsconfig.compilerOptions.paths).map(([k, [v]]) => [
-      k.replace(/\*/, "(.*)"),
+      `^${k.replace(/\*/, "(.*)")}`,
       `<rootDir>/${v.replace(/\*/, "$1")}`,
     ]),
   )
