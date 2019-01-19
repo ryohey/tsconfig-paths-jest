@@ -2,6 +2,8 @@
 
 This module loads `tsconfig.json`'s `paths` and transforms to `moduleNameMapper` used in `jest.config.js`
 
+**Warning:** Use [`pathsToModuleNameMapper`](https://kulshekhar.github.io/ts-jest/user/config/#jest-config-with-helper) with ts-jest version 23 or above.
+
 ## Usage
 
 tsconfig.json
